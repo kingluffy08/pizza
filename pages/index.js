@@ -4,6 +4,14 @@ import { Aboutinfo, Testimonial } from "@/components/About";
 import { ServicesInfo } from "@/components/Services";
 import { PizzaMeals, Products } from "@/components/Menu";
 import Footer from "@/components/Footer";
+import bg_1 from "../public/images/bg_1.jpg";
+import bg_2 from "../public/images/bg_2.jpg";
+import bg_3 from "../public/images/bg_3.jpg";
+import bg_4 from "../public/images/bg_4.jpg";
+import gallery_1 from "../public/images/gallery-1.jpg";
+import gallery_2 from "../public/images/gallery-2.jpg";
+import gallery_3 from "../public/images/gallery-3.jpg";
+import gallery_4 from "../public/images/gallery-4.jpg";
 
 export default function Home() {
 	return (
@@ -15,8 +23,14 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Navbar />
-			<header className="relative z-10 bg-[url('/images/bg_1.JPG')] pt-18 bg-cover bg-center bg-no-repeat h-[750px]">
-				<div className=" bg-[url('/images/bg_3.JPG')] bg-cover bg-center bg-no-repeat h-[750px] ">
+			<header
+				style={{ backgroundImage: bg_1 }}
+				className="relative z-10 pt-18 bg-cover bg-center bg-no-repeat h-[750px]"
+			>
+				<div
+					style={{ backgroundImage: bg_3 }}
+					className="bg-cover bg-center bg-no-repeat h-[750px] "
+				>
 					<div className="bg-black/70 h-full flex justify-center items-center">
 						<div className="py-28 text-center text-white lg:w-2/4">
 							<h3 className="text-[#fac564] font-nycd text-3xl font-light">
@@ -41,7 +55,10 @@ export default function Home() {
 					</div>
 				</div>
 			</header>
-			<div className="bg-[url('/images/bg_4.JPG')] bg-cover bg-no-repeat bg-center bg-fixed text-white">
+			<div
+				style={{ backgroundImage: bg_4 }}
+				className=" bg-cover bg-no-repeat bg-center bg-fixed text-white"
+			>
 				<Aboutinfo />
 			</div>
 			<ServicesInfo />
@@ -49,10 +66,22 @@ export default function Home() {
 				<PizzaMeals heading="HOT PIZZA MEALS" />
 			</div>
 			<div className="md:flex">
-				<div className="relative w-full bg-[url('/images/gallery-1.JPG')] bg-cover bg-center bg-no-repeat h-[300px]"></div>
-				<div className="relative w-full bg-[url('/images/gallery-2.JPG')] bg-cover bg-center bg-no-repeat h-[300px]"></div>
-				<div className="relative w-full bg-[url('/images/gallery-3.JPG')] bg-cover bg-center bg-no-repeat h-[300px]"></div>
-				<div className="relative w-full bg-[url('/images/gallery-4.JPG')] bg-cover bg-center bg-no-repeat h-[300px]"></div>
+				<div
+					style={{ backgroundImage: gallery_1 }}
+					className="relative w-full bg-[url('/images/gallery-1.jpg')] bg-cover bg-center bg-no-repeat h-[300px]"
+				></div>
+				<div
+					style={{ backgroundImage: gallery_1 }}
+					className="relative w-full bg-cover bg-center bg-no-repeat h-[300px]"
+				></div>
+				<div
+					style={{ backgroundImage: gallery_1 }}
+					className="relative w-full bg-cover bg-center bg-no-repeat h-[300px]"
+				></div>
+				<div
+					style={{ backgroundImage: gallery_1 }}
+					className="relative w-full bg-cover bg-center bg-no-repeat h-[300px]"
+				></div>
 			</div>
 			<Testimonial />
 			<div className="bg-menu text-white bg-no-repeat bg-fixed">
