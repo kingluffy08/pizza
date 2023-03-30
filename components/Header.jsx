@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Header({ heading, page }) {
@@ -8,9 +9,9 @@ export default function Header({ heading, page }) {
 					<h1 className="text-center">{heading}</h1>
 					<p className="text-center">
 						{" "}
-						<a className="text-white pr-4" href="/">
+						<Link className="text-white pr-4" href="/">
 							HOME
-						</a>
+						</Link>
 						{page}
 					</p>
 				</div>

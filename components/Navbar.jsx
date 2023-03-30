@@ -37,7 +37,7 @@ function Navbar() {
 		>
 			<div className="bg-black text-white flex justify-between items-center px-4 py-4">
 				<div>
-					<a href="/">
+					<Link href="/">
 						<span className="flex font-josefin text-2xl font-medium">
 							<CiPizza size={30} color="#fac564" />
 							Pizza
@@ -45,7 +45,7 @@ function Navbar() {
 						<small className="absolute text-[11px] top-10 left-4 tracking-[4px] text-[#fac564] font-josefin">
 							DELICIOUS
 						</small>
-					</a>
+					</Link>
 				</div>
 				<div className="md:hidden">
 					<i
