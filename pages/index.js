@@ -61,7 +61,10 @@ export default function Home() {
 				<Aboutinfo />
 			</div>
 			<ServicesInfo />
-			<div className="bg-menu text-white bg-no-repeat bg-fixed">
+			<div
+				style={{ backgroundImage: `url(${bg_4.src})` }}
+				className="text-white bg-no-repeat bg-fixed"
+			>
 				<PizzaMeals heading="HOT PIZZA MEALS" />
 			</div>
 			<div className="md:flex">
@@ -83,7 +86,10 @@ export default function Home() {
 				></div>
 			</div>
 			<Testimonial />
-			<div className="bg-menu text-white bg-no-repeat bg-fixed">
+			<div
+				style={{ backgroundImage: `url(${bg_4.src})` }}
+				className="text-white bg-no-repeat bg-fixed"
+			>
 				<Products />
 			</div>
 			<Footer />
