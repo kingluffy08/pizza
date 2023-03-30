@@ -15,7 +15,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Navbar />
-			<header className="relative z-10 bg-[url('/images/bg_1.jpg')] pt-18 bg-cover bg-center bg-no-repeat h-[750px]">
+			<header className="relative z-10 bg-[url('/images/bg_1.JPG')] pt-18 bg-cover bg-center bg-no-repeat h-[750px]">
 				<div className=" bg-[url('/images/bg_3.jpg')] bg-cover bg-center bg-no-repeat h-[750px] ">
 					<div className="bg-black/70 h-full flex justify-center items-center">
 						<div className="py-28 text-center text-white lg:w-2/4">
