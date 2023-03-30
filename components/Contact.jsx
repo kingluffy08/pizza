@@ -1,8 +1,12 @@
 import React from "react";
+import bg_4 from "../public/images/bg_4.jpg";
 
 export default function Contact() {
 	return (
-		<section className="bg-[url('/images/bg_4.jpg')] bg-cover bg-repeat bg-center">
+		<section
+			style={{ backgroundImage: `url(${bg_4.src})` }}
+			className="bg-cover bg-repeat bg-center"
+		>
 			<div className="px-6 md:px-28 py-28 md:flex">
 				<div className="text-white mb-10 space-y-6 md:w-1/2">
 					<h2 className="leading-[1.4] text-2xl font-normal mb-2">

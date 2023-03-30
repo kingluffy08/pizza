@@ -5,7 +5,6 @@ import { ServicesInfo } from "@/components/Services";
 import { PizzaMeals, Products } from "@/components/Menu";
 import Footer from "@/components/Footer";
 import bg_1 from "../public/images/bg_1.jpg";
-import bg_2 from "../public/images/bg_2.jpg";
 import bg_3 from "../public/images/bg_3.jpg";
 import bg_4 from "../public/images/bg_4.jpg";
 import gallery_1 from "../public/images/gallery-1.jpg";

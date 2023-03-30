@@ -1,10 +1,31 @@
-import Image from "next/image";
 import React, { useState } from "react";
+import bg_4 from "../public/images/bg_4.jpg";
+import pizza_1 from "../public/images/pizza-1.jpg";
+import pizza_2 from "../public/images/pizza-2.jpg";
+import pizza_3 from "../public/images/pizza-3.jpg";
+import pizza_4 from "../public/images/pizza-3.jpg";
+import pizza_5 from "../public/images/pizza-5.jpg";
+import pizza_6 from "../public/images/pizza-6.jpg";
+import pizza_7 from "../public/images/pizza-7.jpg";
+import pizza_8 from "../public/images/pizza-8.jpg";
+import drink_1 from "../public/images/drink-1.jpg";
+import drink_2 from "../public/images/drink-2.jpg";
+import drink_3 from "../public/images/drink-3.jpg";
+import burger_1 from "../public/images/burger-1.jpg";
+import burger_2 from "../public/images/burger-2.jpg";
+import burger_3 from "../public/images/burger-3.jpg";
+import pasta_1 from "../public/images/pasta-1.jpg";
+import pasta_2 from "../public/images/pasta-2.jpg";
+import pasta_3 from "../public/images/pasta-3.jpg";
+import about from "../public/images/about.jpg";
 
 export default function Menu() {
 	return (
 		<>
-			<section className="bg-menu text-white bg-no-repeat bg-fixed">
+			<section
+				style={{ backgroundImage: `url(${bg_4.src})` }}
+				className="text-white bg-no-repeat bg-fixed"
+			>
 				<PizzaMeals heading="OUR MENU" />
 				<Products />
 			</section>
@@ -22,7 +43,7 @@ export function Products() {
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
 			type: "pizza",
 			price: "2.90",
-			img: "/images/pizza-1.jpg",
+			img: pizza_1.src,
 		},
 		{
 			id: 1,
@@ -31,7 +52,7 @@ export function Products() {
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
 			type: "pizza",
 			price: "2.80",
-			img: "/images/pizza-2.jpg",
+			img: pizza_2.src,
 		},
 		{
 			id: 2,
@@ -40,7 +61,7 @@ export function Products() {
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
 			type: "pizza",
 			price: "2.70",
-			img: "/images/pizza-3.jpg",
+			img: pizza_3.src,
 		},
 		{
 			id: 3,
@@ -49,7 +70,7 @@ export function Products() {
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
 			type: "drinks",
 			price: "1.50",
-			img: "/images/drink-1.jpg",
+			img: drink_1.src,
 		},
 		{
 			id: 4,
@@ -58,7 +79,7 @@ export function Products() {
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
 			type: "drinks",
 			price: "1.50",
-			img: "/images/drink-2.jpg",
+			img: drink_2.src,
 		},
 		{
 			id: 5,
@@ -67,7 +88,7 @@ export function Products() {
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
 			type: "drinks",
 			price: "1.50",
-			img: "/images/drink-3.jpg",
+			img: drink_3.src,
 		},
 		{
 			id: 6,
@@ -76,7 +97,7 @@ export function Products() {
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
 			type: "burger",
 			price: "2.13",
-			img: "/images/burger-1.jpg",
+			img: burger_1.src,
 		},
 		{
 			id: 7,
@@ -84,7 +105,7 @@ export function Products() {
 			description: "Far far away, behind the word mountains.",
 			type: "burger",
 			price: "2.15",
-			img: "/images/burger-2.jpg",
+			img: burger_2.src,
 		},
 		{
 			id: 8,
@@ -93,7 +114,7 @@ export function Products() {
 				"Far far away, behind the word mountains, far from the countries.",
 			type: "burger",
 			price: "2.16",
-			img: "/images/burger-3.jpg",
+			img: burger_3.src,
 		},
 		{
 			id: 9,
@@ -102,7 +123,7 @@ export function Products() {
 				"Far far away, behind the word mountains, far from the countries.",
 			type: "pasta",
 			price: "2.50",
-			img: "/images/pasta-1.jpg",
+			img: pasta_1.src,
 		},
 		{
 			id: 10,
@@ -111,7 +132,7 @@ export function Products() {
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
 			type: "pasta",
 			price: "2.60",
-			img: "/images/pasta-2.jpg",
+			img: pasta_2.src,
 		},
 		{
 			id: 11,
@@ -120,7 +141,7 @@ export function Products() {
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
 			type: "pasta",
 			price: "2.55",
-			img: "/images/pasta-3.jpg",
+			img: pasta_3.src,
 		},
 	];
 	const ProductTypes = [
@@ -140,7 +161,10 @@ export function Products() {
 	});
 	return (
 		<div className="lg:flex">
-			<div className="bg-[url('/images/about.jpg')] bg-cover bg-center bg-no-repeat h-[300px] max-lg:mb-12 flex-none lg:h-[674px] lg:w-1/3"></div>
+			<div
+				style={{ backgroundImage: `url(${about.src})` }}
+				className="bg-cover bg-center bg-no-repeat h-[300px] max-lg:mb-12 flex-none lg:h-[674px] lg:w-1/3"
+			></div>
 			<div className="px-4 flex-1 lg:p-12">
 				<div className="mb-6 md:flex md:space-x-4">
 					{ProductTypes.map((data) => (
@@ -186,7 +210,7 @@ export function PizzaMeals({ heading }) {
 			title: "Italian Pizza",
 			description: "Far far away, behind the word mountains",
 			price: "2.80",
-			img: "/images/pizza-1.jpg",
+			img: pizza_1.src,
 		},
 		{
 			id: 1,
@@ -194,7 +218,7 @@ export function PizzaMeals({ heading }) {
 			description:
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia",
 			price: "2.90",
-			img: "/images/pizza-2.jpg",
+			img: pizza_2.src,
 		},
 		{
 			id: 2,
@@ -202,7 +226,7 @@ export function PizzaMeals({ heading }) {
 			description:
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia",
 			price: "2.70",
-			img: "/images/pizza-3.jpg",
+			img: pizza_3.src,
 		},
 		{
 			id: 3,
@@ -210,7 +234,7 @@ export function PizzaMeals({ heading }) {
 			description:
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia",
 			price: "2.90",
-			img: "/images/pizza-4.jpg",
+			img: pizza_4.src,
 		},
 		{
 			id: 4,
@@ -218,7 +242,7 @@ export function PizzaMeals({ heading }) {
 			description:
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia",
 			price: "2.85",
-			img: "/images/pizza-5.jpg",
+			img: pizza_5.src,
 		},
 		{
 			id: 5,
@@ -226,7 +250,7 @@ export function PizzaMeals({ heading }) {
 			description:
 				"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia",
 			price: "2.90",
-			img: "/images/pizza-6.jpg",
+			img: pizza_6.src,
 		},
 	];
 
@@ -303,7 +327,10 @@ export function PizzaMeals({ heading }) {
 				<div className="lg:flex gap-10">
 					<div className="lg:w-1/2">
 						<div className="flex gap-4 mb-8">
-							<div className="bg-[url('/images/pizza-1.jpg')] flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"></div>
+							<div
+								style={{ backgroundImage: `url(${pizza_1.src})` }}
+								className="flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"
+							></div>
 							<div className="w-full">
 								<div className="flex justify-between items-cente border-dashed border-b border-[#bf7e06]">
 									<h2 className="text-[#bfbfbf] bg-black">Italian Pizza</h2>
@@ -315,7 +342,10 @@ export function PizzaMeals({ heading }) {
 							</div>
 						</div>
 						<div className="flex gap-4 mb-8">
-							<div className="bg-[url('/images/pizza-2.jpg')] flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"></div>
+							<div
+								style={{ backgroundImage: `url(${pizza_2.src})` }}
+								className="flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"
+							></div>
 							<div className="w-full">
 								<div className="flex justify-between items-cente border-dashed border-b border-[#bf7e06]">
 									<h2 className="text-[#bfbfbf] bg-black">Hawaiian Pizza</h2>
@@ -327,7 +357,10 @@ export function PizzaMeals({ heading }) {
 							</div>
 						</div>
 						<div className="flex gap-4 mb-8">
-							<div className="bg-[url('/images/pizza-3.jpg')] flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"></div>
+							<div
+								style={{ backgroundImage: `url(${pizza_3.src})` }}
+								className="flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"
+							></div>
 							<div className="w-full">
 								<div className="flex justify-between items-cente border-dashed border-b border-[#bf7e06]">
 									<h2 className="text-[#bfbfbf] bg-black">Greek Pizza</h2>
@@ -339,7 +372,10 @@ export function PizzaMeals({ heading }) {
 							</div>
 						</div>
 						<div className="flex gap-4 mb-8">
-							<div className="bg-[url('/images/pizza-4.jpg')] flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"></div>
+							<div
+								style={{ backgroundImage: `url(${pizza_4.src})` }}
+								className="flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"
+							></div>
 							<div className="w-full">
 								<div className="flex justify-between items-cente border-dashed border-b border-[#bf7e06]">
 									<h2 className="text-[#bfbfbf] bg-black">
@@ -355,7 +391,10 @@ export function PizzaMeals({ heading }) {
 					</div>
 					<div className="lg:w-1/2">
 						<div className="flex gap-4 mb-8">
-							<div className="bg-[url('/images/pizza-5.jpg')] flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"></div>
+							<div
+								style={{ backgroundImage: `url(${pizza_5.src})` }}
+								className="flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"
+							></div>
 							<div className="w-full">
 								<div className="flex justify-between items-cente border-dashed border-b border-[#bf7e06]">
 									<h2 className="text-[#bfbfbf] bg-black">Hawaiian Special</h2>
@@ -367,7 +406,10 @@ export function PizzaMeals({ heading }) {
 							</div>
 						</div>
 						<div className="flex gap-4 mb-8">
-							<div className="bg-[url('/images/pizza-6.jpg')] flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"></div>
+							<div
+								style={{ backgroundImage: `url(${pizza_6.src})` }}
+								className="flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"
+							></div>
 							<div className="w-full">
 								<div className="flex justify-between items-cente border-dashed border-b border-[#bf7e06]">
 									<h2 className="text-[#bfbfbf] bg-black">
@@ -381,7 +423,10 @@ export function PizzaMeals({ heading }) {
 							</div>
 						</div>
 						<div className="flex gap-4 mb-8">
-							<div className="bg-[url('/images/pizza-7.jpg')] flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"></div>
+							<div
+								style={{ backgroundImage: `url(${[pizza_7.src]})` }}
+								className="flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"
+							></div>
 							<div className="w-full">
 								<div className="flex justify-between items-cente border-dashed border-b border-[#bf7e06]">
 									<h2 className="text-[#bfbfbf] bg-black">Bacon Pizza</h2>
@@ -393,7 +438,10 @@ export function PizzaMeals({ heading }) {
 							</div>
 						</div>
 						<div className="flex gap-4 mb-8">
-							<div className="bg-[url('/images/pizza-8.jpg')] flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"></div>
+							<div
+								style={{ backgroundImage: `url(${pizza_8.src})` }}
+								className="flex-none w-[60px] h-[60px] rounded-full bg-cover bg-no-repeat bg-center"
+							></div>
 							<div className="w-full">
 								<div className="flex justify-between items-cente border-dashed border-b border-[#bf7e06]">
 									<h2 className="text-[#bfbfbf] bg-black">Ham & Pineapple</h2>

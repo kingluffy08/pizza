@@ -2,12 +2,17 @@ import React from "react";
 import { GiFruitBowl } from "react-icons/gi";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiPizzaSlice } from "react-icons/gi";
+import bg_4 from "../public/images/bg_4.jpg";
+import food from "../public/images/food.png";
 
 export default function Services() {
 	return (
 		<section>
 			<ServicesInfo />
-			<div className="px-4 py-28 bg-[url('/images/bg_4.jpg')] bg-no-repeat bg-fixed bg-cover">
+			<div
+				style={{ backgroundImage: `url(${bg_4.src})` }}
+				className="px-4 py-28 bg-no-repeat bg-fixed bg-cover"
+			>
 				<div className="mb-20">
 					<h1 className="text-white text-center leading-[1.4] font-normal text-[30px]">
 						HOT MEALS
@@ -81,7 +86,10 @@ export default function Services() {
 
 export function ServicesInfo() {
 	return (
-		<div className="px-4 pb-28 bg-[url('/images/food.png')] bg-repeat">
+		<div
+			style={{ backgroundImage: `url(${food.src})` }}
+			className="px-4 pb-28 bg-repeat"
+		>
 			<div className="py-24 px-4 flex justify-center items-center">
 				<div className="md:w-3/6 text-center">
 					<h1 className="mb-6">OUR SERVICES</h1>

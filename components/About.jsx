@@ -10,11 +10,22 @@ import { GiPizzaSlice } from "react-icons/gi";
 import { GiRibbonMedal } from "react-icons/gi";
 import { TbChefHat } from "react-icons/tb";
 import { FiUsers } from "react-icons/fi";
+import bg_4 from "../public/images/bg_4.jpg";
+import person_1 from "../public/images/person_1.jpg";
+import person_3 from "../public/images/person_3.jpg";
+import person_4 from "../public/images/person_4.jpg";
+import bg_2 from "../public/images/bg_2.jpg";
+import about from "../public/images/about.jpg";
+
+import person_2 from "../public/images/person_2.jpg";
 
 export default function About() {
 	return (
 		<section>
-			<div className="pb-28 bg-[url('/images/bg_4.jpg')] bg-no-repeat bg-fixed bg-cover bg-center text-white ">
+			<div
+				style={{ backgroundImage: `url(${bg_4.src})` }}
+				className="pb-28 bg-no-repeat bg-fixed bg-cover bg-center text-white "
+			>
 				<Aboutinfo />
 				<div>
 					<div className="py-24 px-4">
@@ -33,7 +44,10 @@ export default function About() {
 					</div>
 					<div className="px-4 lg:flex gap-6 md:px-8">
 						<div className="text-center mb-6 border-[#5c3d03] border p-6 md:p-10 hover:border-[#fac564]">
-							<div className="bg-[url('/images/person_1.jpg')] w-[140px] h-[140px] mx-auto mb-8 bg-cover bg-no-repeat bg-center rounded-full"></div>
+							<div
+								style={{ backgroundImage: `url(${person_1.src})` }}
+								className="w-[140px] h-[140px] mx-auto mb-8 bg-cover bg-no-repeat bg-center rounded-full"
+							></div>
 							<div>
 								<h2 className="text-[#fac564] text-[15px] font-normal leading-[1.4] mb-2">
 									TOM SMITH
@@ -48,7 +62,10 @@ export default function About() {
 							</div>
 						</div>
 						<div className="text-center mb-6 border-[#5c3d03] border p-6 md:p-10 hover:border-[#fac564]">
-							<div className="bg-[url('/images/person_2.jpg')] w-[140px] h-[140px] mx-auto mb-8 bg-cover bg-no-repeat bg-center rounded-full"></div>
+							<div
+								style={{ backgroundImage: `url(${person_2.src})` }}
+								className="w-[140px] h-[140px] mx-auto mb-8 bg-cover bg-no-repeat bg-center rounded-full"
+							></div>
 							<div>
 								<h2 className="text-[#fac564] text-[15px] font-normal leading-[1.4] mb-2">
 									Mark Wilson
@@ -63,7 +80,10 @@ export default function About() {
 							</div>
 						</div>
 						<div className="text-center mb-6 border-[#5c3d03] border p-6 md:p-10 hover:border-[#fac564]">
-							<div className="bg-[url('/images/person_3.jpg')] w-[140px] h-[140px] mx-auto mb-8 bg-cover bg-no-repeat bg-center rounded-full"></div>
+							<div
+								style={{ backgroundImage: `url(${person_3.src})` }}
+								className="w-[140px] h-[140px] mx-auto mb-8 bg-cover bg-no-repeat bg-center rounded-full"
+							></div>
 							<div>
 								<h2 className="text-[#fac564] text-[15px] font-normal leading-[1.4] mb-2">
 									Patrick Buenavista
@@ -78,7 +98,10 @@ export default function About() {
 							</div>
 						</div>
 						<div className="text-center mb-6 border-[#5c3d03] border p-6 md:p-10 hover:border-[#fac564]">
-							<div className="bg-[url('/images/person_4.jpg')] w-[140px] h-[140px] mx-auto mb-8 bg-cover bg-no-repeat bg-center rounded-full"></div>
+							<div
+								style={{ backgroundImage: `url(${person_4.src})` }}
+								className="w-[140px] h-[140px] mx-auto mb-8 bg-cover bg-no-repeat bg-center rounded-full"
+							></div>
 							<div>
 								<h2 className="text-[#fac564] text-[15px] font-normal leading-[1.4] mb-2">
 									TOM SMITH
@@ -146,7 +169,10 @@ export function Aboutinfo() {
 				</div>
 			</div>
 			<div className="md:flex">
-				<div className="md:w-1/2 bg-[url('/images/about.jpg')] max-md:h-[300px] bg-no-repeat bg-cover bg-center"></div>
+				<div
+					style={{ backgroundImage: `url(${about.src})` }}
+					className="md:w-1/2 max-md:h-[300px] bg-no-repeat bg-cover bg-center"
+				></div>
 				<div className="md:w-1/2 md:p-10 px-4 py-10">
 					<h2 className="leading-[1.4] text-[28px] mb-6">
 						WELCOME TO
@@ -174,7 +200,10 @@ export function Aboutinfo() {
 
 export function Testimonial() {
 	return (
-		<div className="bg-[url('/images/bg_2.jpg')] bg-center bg-cover bg-no-repeat bg-fixed">
+		<div
+			style={{ backgroundImage: `url(${bg_2.src})` }}
+			className="bg-center bg-cover bg-no-repeat bg-fixed"
+		>
 			<div className="bg-black/70 p-28 md:flex justify-center gap-28">
 				<div className=" text-center mb-10">
 					<div className="border mx-auto border-[#fac564] w-[80px] h-[80px] mb-6 flex justify-center items-center text-[#fac564] cursor-pointer hover:rotate-[135deg] transition-all duration-500 ease-in">
