@@ -24,11 +24,11 @@ export default function Home() {
 			</Head>
 			<Navbar />
 			<header
-				style={{ backgroundImage: `url(${bg_1})` }}
+				style={{ backgroundImage: `url(${bg_1.src})` }}
 				className="relative z-10 pt-18 bg-cover bg-center bg-no-repeat h-[750px]"
 			>
 				<div
-					style={{ backgroundImage: `url(${bg_3})` }}
+					style={{ backgroundImage: `url(${bg_3.src})` }}
 					className="bg-cover bg-center bg-no-repeat h-[750px] "
 				>
 					<div className="bg-black/70 h-full flex justify-center items-center">
@@ -56,7 +56,7 @@ export default function Home() {
 				</div>
 			</header>
 			<div
-				style={{ backgroundImage: `url(${bg_4})` }}
+				style={{ backgroundImage: `url(${bg_4.src})` }}
 				className=" bg-cover bg-no-repeat bg-center bg-fixed text-white"
 			>
 				<Aboutinfo />
@@ -67,19 +67,19 @@ export default function Home() {
 			</div>
 			<div className="md:flex">
 				<div
-					style={{ backgroundImage: `url(${gallery_1})` }}
+					style={{ backgroundImage: `url(${gallery_1.src})` }}
 					className="relative w-full bg-cover bg-center bg-no-repeat h-[300px]"
 				></div>
 				<div
-					style={{ backgroundImage: `url(${gallery_2})` }}
+					style={{ backgroundImage: `url(${gallery_2.src})` }}
 					className="relative w-full bg-cover bg-center bg-no-repeat h-[300px]"
 				></div>
 				<div
-					style={{ backgroundImage: `url(${gallery_3})` }}
+					style={{ backgroundImage: `url(${gallery_3.src})` }}
 					className="relative w-full bg-cover bg-center bg-no-repeat h-[300px]"
 				></div>
 				<div
-					style={{ backgroundImage: `url(${gallery_4})` }}
+					style={{ backgroundImage: `url(${gallery_4.src})` }}
 					className="relative w-full bg-cover bg-center bg-no-repeat h-[300px]"
 				></div>
 			</div>
