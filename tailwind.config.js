@@ -15,12 +15,32 @@ module.exports = {
 				poppins: ["Poppins", "Arial", "sans-serif"],
 				nycd: ["Nothing You Could Do, cursive"],
 			},
-			backgroundImage: {
-				header: "url('/images/bg_3.jpg')",
-				menu: "url('/images/bg_4.jpg')",
-			},
 			transitionProperty: {
 				height: "height",
+			},
+			keyframes: {
+				slideLeft: {
+					"0%": { transform: "translateX(-50%)" },
+					"100%": { transform: "translateX(0%)" },
+				},
+				slideRight: {
+					"0%": { transform: "translateX(50%)" },
+					"100%": { transform: "translateX(0%)" },
+				},
+				slideTop: {
+					"0%": { transform: "translateY(-50%)" },
+					"100%": { transform: "translateY(0%)" },
+				},
+				slideBot: {
+					"0%": { transform: "translateY(50%)" },
+					"100%": { transform: "translateY(0%)" },
+				},
+			},
+			animation: {
+				slideLeft: "slideLeft 1s ease-in",
+				slideRight: "slideRight 1s ease-in",
+				slideTop: "slideTop 1s ease-in",
+				slideBot: "slideBot 1s ease-in",
 			},
 		},
 	},

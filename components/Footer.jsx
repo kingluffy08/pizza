@@ -100,7 +100,7 @@ function Footer() {
 			<p className="text-center my-28">
 				Copyright &copy; 2023 All rights reserved | This template is cloned by
 				<strong className="text-[#fac564]">Joseph Magalem</strong> from Colorlib
-				| Powered by React Nestjs Tailwind Css
+				| Powered by React Nextjs Tailwind Css
 			</p>
 		</footer>
 	);

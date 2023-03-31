@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+
 import bg_4 from "../public/images/bg_4.jpg";
 import pizza_1 from "../public/images/pizza-1.jpg";
 import pizza_2 from "../public/images/pizza-2.jpg";
@@ -204,6 +206,8 @@ export function Products() {
 }
 
 export function PizzaMeals({ heading }) {
+	const { ref: myRef, inView: ElementIsVisible } = useInView();
+
 	const pizza = [
 		{
 			id: 0,
@@ -257,7 +261,7 @@ export function PizzaMeals({ heading }) {
 	return (
 		<>
 			<div className="py-24 px-4 flex justify-center items-center">
-				<div className="md:w-3/6 text-center">
+				<div className="md:w-3/6 text-center animate-slideBot">
 					<h1 className="mb-6">{heading}</h1>
 					<p className=" text-[15px] ">
 						Far far away, behind the word mountains, far from the countries
@@ -265,7 +269,7 @@ export function PizzaMeals({ heading }) {
 					</p>
 				</div>
 			</div>
-			<div className="lg:flex bg-black/30">
+			<div className="lg:flex bg-black/30 animate-slideBot">
 				{pizza.slice(0, 3).map((data) => (
 					<div key={data.id} className="flex max-lg:mb-7 lg:w-1/3">
 						<div
@@ -324,8 +328,12 @@ export function PizzaMeals({ heading }) {
 					</p>
 				</div>
 
-				<div className="lg:flex gap-10">
-					<div className="lg:w-1/2">
+				<div ref={myRef} className="lg:flex gap-10">
+					<div
+						className={`lg:w-1/2 ${
+							ElementIsVisible ? "animate-slideLeft" : ""
+						}`}
+					>
 						<div className="flex gap-4 mb-8">
 							<div
 								style={{ backgroundImage: `url(${pizza_1.src})` }}
@@ -389,7 +397,11 @@ export function PizzaMeals({ heading }) {
 							</div>
 						</div>
 					</div>
-					<div className="lg:w-1/2">
+					<div
+						className={`lg:w-1/2 ${
+							ElementIsVisible ? "animate-slideRight" : ""
+						}`}
+					>
 						<div className="flex gap-4 mb-8">
 							<div
 								style={{ backgroundImage: `url(${pizza_5.src})` }}
