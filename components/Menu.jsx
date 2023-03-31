@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import React, { useRef, useState } from "react";
+import { useInView } from "framer-motion";
 
 import bg_4 from "../public/images/bg_4.jpg";
 import pizza_1 from "../public/images/pizza-1.jpg";
@@ -161,6 +161,7 @@ export function Products() {
 			? obj.type === "pasta"
 			: obj.type === "pizza";
 	});
+
 	return (
 		<div className="lg:flex">
 			<div
@@ -206,8 +207,6 @@ export function Products() {
 }
 
 export function PizzaMeals({ heading }) {
-	const { ref: myRef, inView: ElementIsVisible } = useInView();
-
 	const pizza = [
 		{
 			id: 0,
@@ -258,10 +257,12 @@ export function PizzaMeals({ heading }) {
 		},
 	];
 
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true });
 	return (
 		<>
 			<div className="py-24 px-4 flex justify-center items-center">
-				<div className="md:w-3/6 text-center animate-slideBot">
+				<div className="md:w-3/6 text-center">
 					<h1 className="mb-6">{heading}</h1>
 					<p className=" text-[15px] ">
 						Far far away, behind the word mountains, far from the countries
@@ -269,7 +270,7 @@ export function PizzaMeals({ heading }) {
 					</p>
 				</div>
 			</div>
-			<div className="lg:flex bg-black/30 animate-slideBot">
+			<div className="lg:flex bg-black/30">
 				{pizza.slice(0, 3).map((data) => (
 					<div key={data.id} className="flex max-lg:mb-7 lg:w-1/3">
 						<div
@@ -328,12 +329,8 @@ export function PizzaMeals({ heading }) {
 					</p>
 				</div>
 
-				<div ref={myRef} className="lg:flex gap-10">
-					<div
-						className={`lg:w-1/2 ${
-							ElementIsVisible ? "animate-slideLeft" : ""
-						}`}
-					>
+				<div ref={ref} className="lg:flex gap-10">
+					<div className={`lg:w-1/2 ${isInView ? "animate-slideLeft" : ""}`}>
 						<div className="flex gap-4 mb-8">
 							<div
 								style={{ backgroundImage: `url(${pizza_1.src})` }}
@@ -397,11 +394,7 @@ export function PizzaMeals({ heading }) {
 							</div>
 						</div>
 					</div>
-					<div
-						className={`lg:w-1/2 ${
-							ElementIsVisible ? "animate-slideRight" : ""
-						}`}
-					>
+					<div className={`lg:w-1/2 $ ${isInView ? "animate-slideRight" : ""}`}>
 						<div className="flex gap-4 mb-8">
 							<div
 								style={{ backgroundImage: `url(${pizza_5.src})` }}

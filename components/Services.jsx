@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 import { GiFruitBowl } from "react-icons/gi";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiPizzaSlice } from "react-icons/gi";
 import bg_4 from "../public/images/bg_4.jpg";
 import food from "../public/images/food.png";
+import { useInView } from "framer-motion";
 
 export default function Services() {
+	const ref = useRef(null);
+	const isInview = useInView(ref, { once: true });
 	return (
 		<section>
 			<ServicesInfo />
@@ -13,7 +16,10 @@ export default function Services() {
 				style={{ backgroundImage: `url(${bg_4.src})` }}
 				className="px-4 py-28 bg-no-repeat bg-fixed bg-cover"
 			>
-				<div className="mb-20">
+				<div
+					ref={ref}
+					className={`mb-20 ${isInview ? "animate-slideBot" : ""}`}
+				>
 					<h1 className="text-white text-center leading-[1.4] font-normal text-[30px]">
 						HOT MEALS
 					</h1>
@@ -29,8 +35,10 @@ export default function Services() {
 						Vokalia and Consonantia, there live the blind texts.
 					</p>
 				</div>
-				<div className="md:flex gap-4 flex-wrap justify-center">
-					<div className="text-center mb-4">
+				<div ref={ref} className="md:flex gap-4 flex-wrap justify-center">
+					<div
+						className={`text-center mb-4 ${isInview ? "animate-slideBot" : ""}`}
+					>
 						<div className="bg-[url('/images/pizza-1.jpg')] mx-auto mb-6 h-[200px] w-[200px] bg-cover bg-center bg-no-repeat rounded-full"></div>
 						<h2 className=" mb-4 text-white">Italian Pizza</h2>
 						<p className="mb-6 w-[238.07px] h-[112px] mx-auto">
@@ -42,7 +50,9 @@ export default function Services() {
 							Add to cart
 						</button>
 					</div>
-					<div className="text-center mb-4">
+					<div
+						className={`text-center mb-4 ${isInview ? "animate-slideBot" : ""}`}
+					>
 						<div className="bg-[url('/images/pizza-2.jpg')] mx-auto mb-6 h-[200px] w-[200px] bg-cover bg-center bg-no-repeat rounded-full"></div>
 						<h2 className=" mb-4 text-white">Italian Pizza</h2>
 						<p className="mb-6 w-[238.07px] h-[112px] mx-auto">
@@ -54,7 +64,9 @@ export default function Services() {
 							Add to cart
 						</button>
 					</div>
-					<div className="text-center mb-4">
+					<div
+						className={`text-center mb-4 ${isInview ? "animate-slideBot" : ""}`}
+					>
 						<div className="bg-[url('/images/pizza-3.jpg')] mx-auto mb-6 h-[200px] w-[200px] bg-cover bg-center bg-no-repeat rounded-full"></div>
 						<h2 className=" mb-4 text-white">Italian Pizza</h2>
 						<p className="mb-6 w-[238.07px] h-[112px] mx-auto">
@@ -66,7 +78,9 @@ export default function Services() {
 							Add to cart
 						</button>
 					</div>
-					<div className="text-center mb-4">
+					<div
+						className={`text-center mb-4 ${isInview ? "animate-slideBot" : ""}`}
+					>
 						<div className="bg-[url('/images/pizza-4.jpg')] mx-auto mb-6 h-[200px] w-[200px] bg-cover bg-center bg-no-repeat rounded-full"></div>
 						<h2 className=" mb-4 text-white">Italian Pizza</h2>
 						<p className="mb-6 w-[238.07px] h-[112px] mx-auto">
@@ -85,22 +99,30 @@ export default function Services() {
 }
 
 export function ServicesInfo() {
+	const ref = useRef(null);
+	const isInview = useInView(ref, { once: true });
 	return (
 		<div
 			style={{ backgroundImage: `url(${food.src})` }}
 			className="px-4 pb-28 bg-repeat"
 		>
-			<div className="py-24 px-4 flex justify-center items-center">
+			<div ref={ref} className="py-24 px-4 flex justify-center items-center">
 				<div className="md:w-3/6 text-center">
-					<h1 className="mb-6">OUR SERVICES</h1>
-					<p className=" text-[15px] text-[#5c3d03]">
+					<h1 className={`mb-6 ${isInview ? "animate-slideBot" : ""}`}>
+						OUR SERVICES
+					</h1>
+					<p
+						className={`text-[15px] text-[#5c3d03] ${
+							isInview ? "animate-slideBot" : ""
+						}`}
+					>
 						Far far away, behind the word mountains, far from the countries
 						Vokalia and Consonantia, there live the blind texts.
 					</p>
 				</div>
 			</div>
-			<div className="md:flex gap-4">
-				<div className="mb-10">
+			<div ref={ref} className="md:flex gap-4">
+				<div className={`mb-10 ${isInview ? "animate-slideBot" : ""}`}>
 					<div className="flex justify-center mb-10 ">
 						<div className="text-[#5c3d03] flex justify-center items-center border-[#ab8237] border w-[100px] h-[100px] transition-all duration-300 ease-in hover:animate-spin cursor-pointer hover:border-[#ffc107] hover:bg-[#ffc107] hover:text-white">
 							<GiFruitBowl size={60} />
@@ -114,7 +136,7 @@ export function ServicesInfo() {
 						</p>
 					</div>
 				</div>
-				<div className="mb-10">
+				<div className={`mb-10 ${isInview ? "animate-slideBot" : ""}`}>
 					<div className="flex justify-center mb-10 ">
 						<div className="text-[#5c3d03] flex justify-center items-center border-[#ab8237] border w-[100px] h-[100px] transition-all duration-300 ease-in hover:animate-spin cursor-pointer hover:border-[#ffc107] hover:bg-[#ffc107] hover:text-white">
 							<MdDeliveryDining size={60} />
@@ -130,7 +152,7 @@ export function ServicesInfo() {
 						</p>
 					</div>
 				</div>
-				<div>
+				<div className={`${isInview ? "animate-slideBot" : ""}`}>
 					<div className="flex justify-center mb-10 ">
 						<div className="text-[#5c3d03] flex justify-center items-center border-[#ab8237] border w-[100px] h-[100px] transition-all duration-300 ease-in hover:animate-spin cursor-pointer hover:border-[#ffc107] hover:bg-[#ffc107] hover:text-white">
 							<GiPizzaSlice size={60} />
